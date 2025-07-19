@@ -1,0 +1,88 @@
+body {
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #2d3a4b;
+    margin-top: 40px;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+#data_form {
+    background: #fff;
+    max-width: 400px;
+    margin: 40px auto 0 auto;
+    padding: 32px 28px 24px 28px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+input[type="number"], select {
+    padding: 8px 12px;
+    border: 1px solid #bfc9d2;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f7fafd;
+    margin-bottom: 8px;
+    transition: border-color 0.2s;
+}
+
+input[type="number"]:focus, select:focus {
+    border-color: #5dade2;
+    outline: none;
+}
+
+button {
+    background: linear-gradient(90deg, #5dade2 0%, #48c6ef 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #48c6ef 0%, #5dade2 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+#prediction_result {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #34495e;
+}
+
+#prediction_result span[color="green"] {
+    color: #27ae60;
+    font-weight: bold;
+}
+#prediction_result span[color="red"] {
+    color: #e74c3c;
+    font-weight: bold;
+}
+#prediction_result span[color="yellow"] {
+    color: #f1c40f;
+    font-weight: bold;
+}

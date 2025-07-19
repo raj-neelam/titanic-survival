@@ -1,0 +1,15 @@
+[project]
+name = "titanic-full"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.116.1",
+    "ipykernel>=6.29.5",
+    "joblib>=1.5.1",
+    "matplotlib>=3.10.3",
+    "pandas>=2.3.1",
+    "pydantic>=2.11.7",
+    "scikit-learn>=1.7.1",
+    "seaborn>=0.13.2",
+    "uvicorn>=0.35.0",
+]
