@@ -32,21 +32,21 @@ gap: 18px;
 label {
     font-size: 1.1rem;
     color: #34495e;
-    margin-bottom: 6px;
+    margin-bottom: 1px;
     font-weight: 500;
 }
 
-input[type="number"], select {
+input , select {
     padding: 8px 12px;
     border: 1px solid #bfc9d2;
     border-radius: 8px;
     font-size: 1rem;
     background: #f7fafd;
-    margin-bottom: 8px;
+    margin-bottom: 1px;
     transition: border-color 0.2s;
 }
 
-input[type="number"]:focus, select:focus {
+input:focus, select:focus {
     border-color: #5dade2;
     outline: none;
 }

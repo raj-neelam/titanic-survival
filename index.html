@@ -9,16 +9,19 @@
 <body>
     <h1>Titanic Survival Prediction model</h1>
     <form id="data_form" name="user_data" method="POST" onsubmit="predict(); return false;">
-        <label for="gender">Sex: </label>
+        <label>What is your name?</label>
+        <input id="name" type="text" placeholder="Enter your name">
+        <br>
+        <label for="gender">What is your gender? </label>
         <select name="gender" id="gender">
             <option value="male">Male</option>
             <option value="female">Female</option>
         </select>
         <br>
-        <label for="age">Age: </label>
-        <input id="age" type="number" min="0"  max="100" placeholder="age">
+        <label for="age">What is your age? </label>
+        <input id="age" type="number" min="0"  max="100" value="20" placeholder="age">
         <br>
-        <label for="pclass">Passenger Class: </label>
+        <label for="pclass">Your Passenger Class: </label>
         <select id="pclass" name="pclass" id="pclass">
             <option value="1">1 - UPPER CLASS</option>
             <option value="2">2 - MID CLASS</option>
@@ -27,7 +30,7 @@
         <br>
         <button>Predict</button>
     </form>
-    <h1 id="prediction_result">Prediction : No value</h1>
+    <h1 id="prediction_result"></h1>
     <script src="./frontend/script.js"></script>
 </body>
 </html>

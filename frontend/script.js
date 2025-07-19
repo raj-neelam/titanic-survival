@@ -1,4 +1,5 @@
 async function predict() {
+    const name = document.getElementById("name").value;
     const sex = document.getElementById("gender").value;
     const age = document.getElementById("age").value;
     const pclass = document.getElementById("pclass").value;
@@ -23,9 +24,9 @@ async function predict() {
     let html_to_insert;
     console.log(data)
     if (data.prediction == "Survived"){
-        html_to_insert = "<span color=green>Prediction: Survived </span>";
+        html_to_insert = `<span color=green>Prediction: ${name} survived 😇</span>`;
     }else if (data.prediction == "Died"){
-        html_to_insert = "<span color=red>Prediction: Died </span>";
+        html_to_insert = `<span color=red>Prediction: ${name} Died 🙏</span>`;
     }else{
         html_to_insert = "<span color=yellow>Prediction: Invalid response  </span>";
     }
