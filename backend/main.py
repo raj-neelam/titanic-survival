@@ -4,7 +4,7 @@ import joblib
 from pydantic import BaseModel
 import pandas as pd
 
-model = joblib.load("titanic_model.pkl")
+model = joblib.load("backend/titanic_model.pkl")
 
 app = FastAPI()
 
