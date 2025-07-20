@@ -13,7 +13,7 @@ async function predict() {
     console.log("data to send : ", data_to_send);
 
 
-    const result = await fetch("http://127.0.0.1:8000/predict",{
+    const result = await fetch("/predict",{
         method: 'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify(data_to_send)
@@ -22,7 +22,7 @@ async function predict() {
     const data = await result.json();
 
     let html_to_insert;
-    console.log(data)
+    console.log("recived data : ", data)
     if (data.prediction == "Survived"){
         html_to_insert = `<span color=green>Prediction: ${name} survived 😇</span>`;
     }else if (data.prediction == "Died"){

@@ -8,7 +8,8 @@ import pandas as pd
 import uvicorn
 import os
 
-model = joblib.load("backend/titanic_model.pkl")
+model_path = os.path.join(os.path.dirname(__file__), "titanic_model.pkl")
+model = joblib.load(model_path)
 
 app = FastAPI()
 
@@ -36,14 +37,10 @@ class Input(BaseModel):
 
 @app.get("/status")
 def status():
-    return {"satatus":"running"}
+    return {"status":"sab thik chal raha hai ✅"}
 
 @app.post("/predict")
 def predict(data: Input):
     val = pd.DataFrame([[data.sex, int(data.age), int(data.pclass)]], columns=["Sex", "Age", "Pclass"])
     prediction = out = model.predict(val)
     return {"prediction": str("Survived" if prediction[0] else "Died")}
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))
-    uvicorn.run("backend.main:app", host="0.0.0.0", port=port)
